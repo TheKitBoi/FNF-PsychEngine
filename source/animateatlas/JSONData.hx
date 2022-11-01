@@ -68,6 +68,7 @@ typedef LayerFrameData = {
 
 typedef ElementData = {
 	?ATLAS_SPRITE_instance:Dynamic,
+	?StageInstance:String,
 	?SYMBOL_Instance:SymbolInstanceData
 }
 

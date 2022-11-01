@@ -85,6 +85,8 @@ class TileContainerSymbol extends TileContainer {
 		__rotation = null;
 		__scaleX = null;
 		__scaleY = null;
+		__resolutionX = null;
+		__resolutionY = null;
 		__setRenderDirty();
 
 		alpha = 1.0;
@@ -263,6 +265,8 @@ class TileContainerSymbol extends TileContainer {
 			__rotation = null;
 			__scaleX = null;
 			__scaleY = null;
+			__resolutionX = null;
+			__resolutionY = null;
 			__setRenderDirty();
 		}
 	}

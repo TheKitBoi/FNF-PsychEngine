@@ -25,6 +25,7 @@ typedef AtlasData = {
 		format:String,
 		size:{w:Int, h:Int},
 		scale:String,
+		resolution:String
 	}
 }
 

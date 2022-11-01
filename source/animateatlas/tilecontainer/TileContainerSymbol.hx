@@ -141,8 +141,12 @@ class TileContainerSymbol extends TileContainer {
 		var elements:Array<ElementData> = (frameData != null) ? frameData.elements : null;
 		var numElements:Int = (elements != null) ? elements.length : 0;
 		for (i in 0...numElements) {
+			var elementData2:ElementData = elements[i].StageInstance;
 			var elementData:SymbolInstanceData = elements[i].SYMBOL_Instance;
 			if (elementData == null) {
+				continue;
+			}
+			if (elementData2 == null) {
 				continue;
 			}
 			// this is confusing but needed :(

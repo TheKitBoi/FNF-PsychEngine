@@ -47,6 +47,7 @@ class CharacterEditorState extends MusicBeatState
 {
 	var char:Character;
 	var ghostChar:Character;
+	public var atlasChar:FlxAnimate; // shitty character bandage
 	var textAnim:FlxText;
 	var bgLayer:FlxTypedGroup<FlxSprite>;
 	var charLayer:FlxTypedGroup<Character>;
@@ -833,7 +834,7 @@ class CharacterEditorState extends MusicBeatState
 		}
 		var anims:Array<AnimArray> = char.animationsArray.copy();
 		if(Paths.fileExists('images/' + char.imageFile + '/Animation.json', TEXT)) {
-			char.frames = FlxAnimate(char.imageFile);
+			atlasChar.frames = FlxAnimate(char.imageFile);
 		} else if(Paths.fileExists('images/' + char.imageFile + '.txt', TEXT)) {
 			char.frames = Paths.getPackerAtlas(char.imageFile);
 		} else {

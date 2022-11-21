@@ -63,6 +63,8 @@ class FunkinLua {
 	public static var Function_Stop:Dynamic = 1;
 	public static var Function_Continue:Dynamic = 0;
 	public static var Function_StopLua:Dynamic = 2;
+	
+	public var atlasLua:FlxAnimate; // shitty character bandage
 
 	//public var errorHandler:String->Void;
 	#if LUA_ALLOWED
@@ -2968,7 +2970,7 @@ class FunkinLua {
 		switch(spriteType.toLowerCase().trim())
 		{
 			case "texture" | "textureatlas" | "tex":
-				spr.frames = FlxAnimate(image);
+				atlasLua = FlxAnimate(image);
 
 			case "packer" | "packeratlas" | "pac":
 				spr.frames = Paths.getPackerAtlas(image);

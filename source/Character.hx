@@ -165,7 +165,7 @@ class Character extends FlxSprite
 						frames = Paths.getSparrowAtlas(json.image);
 					
 					case "texture":
-						atlasFrames = FlxAnimate(json.image);
+						frames.atlasFrames = FlxAnimate(json.image);
 				}
 				imageFile = json.image;
 

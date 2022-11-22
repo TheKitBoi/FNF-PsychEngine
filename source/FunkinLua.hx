@@ -2970,7 +2970,7 @@ class FunkinLua {
 		switch(spriteType.toLowerCase().trim())
 		{
 			case "texture" | "textureatlas" | "tex":
-				spr.frames.atlasLua = FlxAnimate(image);
+				atlasLua = new FlxAnimate(image);
 
 			case "packer" | "packeratlas" | "pac":
 				spr.frames = Paths.getPackerAtlas(image);

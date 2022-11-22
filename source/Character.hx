@@ -74,7 +74,6 @@ class Character extends FlxSprite
 	//Used on Character Editor
 	public var imageFile:String = '';
 	public var jsonScale:Float = 1;
-	public var atlasFrames:FlxAnimate; // shitty character bandage
 	public var noAntialiasing:Bool = false;
 	public var originalFlipX:Bool = false;
 	public var healthColorArray:Array<Int> = [255, 0, 0];
@@ -165,7 +164,7 @@ class Character extends FlxSprite
 						frames = Paths.getSparrowAtlas(json.image);
 					
 					case "texture":
-						atlasFrames = new FlxAnimate(json.image);
+						frames = new FlxAnimate(json.image);
 				}
 				imageFile = json.image;
 

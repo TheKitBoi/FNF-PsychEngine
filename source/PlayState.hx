@@ -154,8 +154,6 @@ class PlayState extends MusicBeatState
 	public var dad:Character = null;
 	public var gf:Character = null;
 	public var boyfriend:Boyfriend = null;
-	
-	public var atlasCharacter:FlxAnimate; // shitty character bandage
 
 	public var notes:FlxTypedGroup<Note>;
 	public var unspawnNotes:Array<Note> = [];
@@ -1931,7 +1929,7 @@ class PlayState extends MusicBeatState
 					gfCutscene.alpha = 0.00001;
 				}
 
-				picoCutscene.atlasCharacter = FlxAnimate('cutscenes/stressPico');
+				picoCutscene = new FlxAnimate('cutscenes/stressPico');
 				picoCutscene.animation.addByPrefix('anim', 'Pico Badass', 24, false);
 				addBehindGF(picoCutscene);
 				picoCutscene.alpha = 0.00001;

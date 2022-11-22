@@ -33,7 +33,7 @@ typedef Settings = {
 	?Offset:FlxPoint,
 }
 
-class FlxAnimate extends FlxSprite
+class FlxAnimate extends FlxFramesCollection
 {
 	public var anim(default, null):FlxAnim;
 

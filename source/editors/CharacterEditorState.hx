@@ -834,7 +834,7 @@ class CharacterEditorState extends MusicBeatState
 		}
 		var anims:Array<AnimArray> = char.animationsArray.copy();
 		if(Paths.fileExists('images/' + char.imageFile + '/Animation.json', TEXT)) {
-			char.frames.atlasChar = FlxAnimate(char.imageFile);
+			atlasChar.char.frames = FlxAnimate(char.imageFile);
 		} else if(Paths.fileExists('images/' + char.imageFile + '.txt', TEXT)) {
 			char.frames = Paths.getPackerAtlas(char.imageFile);
 		} else {

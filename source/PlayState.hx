@@ -1930,7 +1930,7 @@ class PlayState extends MusicBeatState
 				}
 
 				picoCutscene = new FlxAnimate('cutscenes/stressPico');
-				picoCutscene.animation.addByPrefix('anim', 'Pico Badass', 24, false);
+				picoCutscene.anim.addBySymbol('anim', 'Pico Badass', 0, 0, 24);
 				addBehindGF(picoCutscene);
 				picoCutscene.alpha = 0.00001;
 

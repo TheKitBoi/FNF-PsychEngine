@@ -3,7 +3,7 @@ package editors;
 #if desktop
 import Discord.DiscordClient;
 #end
-import flxanimate.FlxAnimate;
+import animateatlas.AtlasFrameMaker;
 import flixel.FlxG;
 import flixel.FlxObject;
 import flixel.FlxSprite;
@@ -833,7 +833,7 @@ class CharacterEditorState extends MusicBeatState
 		}
 		var anims:Array<AnimArray> = char.animationsArray.copy();
 		if(Paths.fileExists('images/' + char.imageFile + '/Animation.json', TEXT)) {
-			char.frames = new FlxAnimate(char.imageFile);
+			char.frames = new AtlasFrameMaker.construct(char.imageFile);
 		} else if(Paths.fileExists('images/' + char.imageFile + '.txt', TEXT)) {
 			char.frames = Paths.getPackerAtlas(char.imageFile);
 		} else {
